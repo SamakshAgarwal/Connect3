@@ -103,17 +103,16 @@ public class SinglePlayerMode extends AppCompatActivity {
                 clicked.setImageResource(R.drawable.x);
                 textView.setText(R.string.YourTurn);
                 player = 0;
+                checkResult();
             } else {
                 clicked.setImageResource(R.drawable.o1);
                 textView.setText(R.string.CPUTurn);
                 player = 1;
+                checkResult();
                 thirdTileMove();
             }
         }
-
         clicked.animate().translationYBy(2000f).rotation(3600).setDuration(500);
-
-        checkResult();
     }
 
     public void checkResult(){
@@ -133,7 +132,8 @@ public class SinglePlayerMode extends AppCompatActivity {
         }
     }
 
-    public void restart(View view){
+    public void restart(View view)
+    {
         c = 0;
         recreate();
     }
