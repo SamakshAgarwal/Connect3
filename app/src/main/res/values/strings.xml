@@ -7,4 +7,7 @@
     <string name="Draw">Draw</string>
     <string name="Player2Move">Player 2 move</string>
     <string name="Player1Move">Player 1 move</string>
+    <string name="SinglePlayer">Single Player</string>
+    <string name="MultiPlayer">Multi Player</string>
+    <string name="GameTile">Game Tile</string>
 </resources>
