@@ -13,6 +13,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public void onSingleplayerClick(View view){
+        Intent intent = new Intent(this,SinglePlayerMode.class);
+        startActivity(intent);
+    }
+
     public void onMultiplayerClick(View view){
         Intent intent = new Intent(this, TwoPlayerMode.class);
         startActivity(intent);

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Connect 3</string>
+    <string name="CPUTurn">CPU\'s turn</string>
+    <string name="YourTurn">Your turn</string>
+    <string name="CrossWins">Cross Wins</string>
+    <string name="CircleWins">Circle Wins</string>
+    <string name="Draw">Draw</string>
+    <string name="Player2Move">Player 2 move</string>
+    <string name="Player1Move">Player 1 move</string>
 </resources>
