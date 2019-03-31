@@ -55,13 +55,21 @@ public class SinglePlayerMode extends AppCompatActivity {
     }
 
     public void secondTileMove(){
-        int rand = ThreadLocalRandom.current().nextInt(0,8+1);
-        if(playerState[rand]==2){
-            imageViews[rand].performClick();
+        int k=0;
+        for (int aPlayerState : playerState) {
+            if (aPlayerState == 2)
+                k++;
         }
-        else {
-            secondTileMove();
+        int[] availableTiles = new int[k];
+        k=0;
+        for(int i=0;i<playerState.length;i++){
+            if(playerState[i]==2){
+                availableTiles[k] = i;
+                k++;
+            }
         }
+        int rand = ThreadLocalRandom.current().nextInt(0,k);
+        imageViews[availableTiles[rand]].performClick();
     }
 
     public void thirdTileMove(){
@@ -90,7 +98,8 @@ public class SinglePlayerMode extends AppCompatActivity {
                 }
             }
         }
-        secondTileMove();
+        if(c<9)
+            secondTileMove();
     }
 
     public void onClick(View view){
@@ -123,6 +132,7 @@ public class SinglePlayerMode extends AppCompatActivity {
                     textView.setText(R.string.CrossWins);
                 else
                     textView.setText(R.string.CircleWins);
+                return;
             }
         }
         c++;
